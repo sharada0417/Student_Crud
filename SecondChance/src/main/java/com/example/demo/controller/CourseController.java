@@ -7,14 +7,20 @@ import com.example.demo.model.Course;
 
 @RestController
 @RequestMapping("/course")
-public interface CourseController extends CRUDController <String,Course>{
-	public CourseController() {
-		Course ecommerce = new Course("IT3232","Practical for e commerce",2);
-		Course webservice = new Course("IT2234","Web service and swerver Techonolgy",4);
-		Course webapplication = new Course("CSC3132","WebService Apllication development",2);
+public class CourseController extends CRUDController<String,Course>{
+	
+	public CourseController ()
+	{
+		Course ecommerce = new Course("IT3232","Practical for E-commerce",2);
+		Course webservice = new Course("IT2234","WebService and server Technology",4);
+		Course webapplication = new Course("CSC3132","Web Application Development",2);
 		
 		getMap().put(webapplication.getCode(),webapplication);
 		getMap().put(webservice.getCode(),webservice);
 		getMap().put(ecommerce.getCode(),ecommerce);
+		
+		
+		
+		
 	}
 }
